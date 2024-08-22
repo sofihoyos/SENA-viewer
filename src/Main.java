@@ -7,12 +7,80 @@ public class Main {
         while(opcionMenu != 0) {
             Methods.mostrarMenu();
             opcionMenu= scanner.nextInt();
-            switch (opcionMenu){
+            int opcionSubMenu=-1;
+            switch (opcionMenu) {
                 case 1:
-                    System.out.println("MOVIES");
+                    Methods.subMenuMovie();
+                    opcionSubMenu=scanner.nextInt();
+                    while (opcionSubMenu != 0){
+                        switch (opcionSubMenu){
+                            case 1:
+                                Methods.methodsMovie.showMovies();
+                                break;
+                            case 2:
+                                break;
+                            case 0:
+                                System.out.println("Saliendo...");
+                                break;
+                        }
+                    }
 
+                    break;
+                case 2:
+                    Methods.subMenuSerie();
+                    opcionSubMenu=scanner.nextInt();
+                    while (opcionSubMenu != 0){
+                        switch (opcionSubMenu){
+                            case 1:
+                                Methods.methodsMovie.showMovies();
+                                break;
+                            case 2:
+                                break;
+                            case 0:
+                                System.out.println("Saliendo...");
+                                break;
+                        }
+                    }
+                    break;
+                case 3:
+                    Methods.subMenuBook();
+                    opcionSubMenu=scanner.nextInt();
+                    while (opcionSubMenu != 0){
+                        switch (opcionSubMenu){
+                            case 1:
+                                Methods.methodsMovie.showMovies();
+                                break;
+                            case 2:
+                                break;
+                            case 0:
+                                System.out.println("Saliendo...");
+                                break;
+                        }
+                    }
+                    break;
+                case 4:
+                    Methods.subMenuMagazine();
+                    opcionSubMenu=scanner.nextInt();
+                    while (opcionSubMenu != 0){
+                        switch (opcionSubMenu){
+                            case 1:
+                                Methods.methodsMovie.showMovies();
+                                break;
+                            case 2:
+                                break;
+                            case 0:
+                                System.out.println("Saliendo...");
+                                break;
+                        }
+                    }
+                    break;
+                case 0:
+                    System.out.println("Saliendo...");
+                    break;
+                default:
+                    System.out.println("Opción no válida. Por favor, selecciona una opción del 0 al 6.");
             }
-
         }
+        scanner.close();
     }
 }
