@@ -1,84 +1,46 @@
 import java.util.Scanner;
+import edu.misena.senaviewer.model.Movie;
+import edu.misena.senaviewer.model.Serie;
+import edu.misena.senaviewer.model.Book;
+import edu.misena.senaviewer.model.Magazine;
 
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int opcionMenu= -1;
-        while(opcionMenu != 0) {
+        int opcionMenu = -1;
+
+        Methods.methodsMovie.addMovie(new Movie("Inception", "Sci-Fi", "Christopher Nolan", "148 min", 2010));
+        Methods.methodsSerie.addSerie(new Serie("Stranger Things", "Science Fiction", "50 min por episodio"));
+        Methods.methodsBook.addBook(new Book("1984", "8 de junio de 1949", "Secker & Warburg", "978-0451524935"));
+        Methods.methodsMagazine.addMagazine(new Magazine("National Geographic", "Agosto 2024", "National Geographic Partners"));
+
+        while (opcionMenu != 0) {
             Methods.mostrarMenu();
-            opcionMenu= scanner.nextInt();
-            int opcionSubMenu=-1;
+            opcionMenu = scanner.nextInt();
             switch (opcionMenu) {
                 case 1:
-                    Methods.subMenuMovie();
-                    opcionSubMenu=scanner.nextInt();
-                    while (opcionSubMenu != 0){
-                        switch (opcionSubMenu){
-                            case 1:
-                                Methods.methodsMovie.showMovies();
-                                break;
-                            case 2:
-                                break;
-                            case 0:
-                                System.out.println("Saliendo...");
-                                break;
-                        }
-                    }
-
+                    Methods.methodsMovie.showMovies();
                     break;
                 case 2:
-                    Methods.subMenuSerie();
-                    opcionSubMenu=scanner.nextInt();
-                    while (opcionSubMenu != 0){
-                        switch (opcionSubMenu){
-                            case 1:
-                                Methods.methodsMovie.showMovies();
-                                break;
-                            case 2:
-                                break;
-                            case 0:
-                                System.out.println("Saliendo...");
-                                break;
-                        }
-                    }
+                    Methods.methodsSerie.showSerie();
                     break;
                 case 3:
-                    Methods.subMenuBook();
-                    opcionSubMenu=scanner.nextInt();
-                    while (opcionSubMenu != 0){
-                        switch (opcionSubMenu){
-                            case 1:
-                                Methods.methodsMovie.showMovies();
-                                break;
-                            case 2:
-                                break;
-                            case 0:
-                                System.out.println("Saliendo...");
-                                break;
-                        }
-                    }
+                    Methods.methodsBook.showBook();
                     break;
                 case 4:
-                    Methods.subMenuMagazine();
-                    opcionSubMenu=scanner.nextInt();
-                    while (opcionSubMenu != 0){
-                        switch (opcionSubMenu){
-                            case 1:
-                                Methods.methodsMovie.showMovies();
-                                break;
-                            case 2:
-                                break;
-                            case 0:
-                                System.out.println("Saliendo...");
-                                break;
-                        }
-                    }
+                    Methods.methodsMagazine.showMagazine();
+                    break;
+                case 5:
+                    // report
+                    break;
+                case 6:
+                    // report today
                     break;
                 case 0:
                     System.out.println("Saliendo...");
                     break;
                 default:
-                    System.out.println("Opción no válida. Por favor, selecciona una opción del 0 al 6.");
+                    System.out.println("Opción no válida. Por favor, selecciona una opción del 0 al 7.");
             }
         }
         scanner.close();

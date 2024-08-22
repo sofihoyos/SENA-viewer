@@ -5,7 +5,7 @@ public class Movie {
     private String title;
     private String gender;
     private String creator;
-    private int duration;
+    private String duration;
     private int year;
     private boolean viewed;
     private int timeViewed;
@@ -14,7 +14,7 @@ public class Movie {
             String title,
             String gender,
             String creator,
-            int duration,
+            String duration,
             int year
     ){
         this.title=title;
@@ -22,8 +22,8 @@ public class Movie {
         this.creator=creator;
         this.duration=duration;
         this.year=year;
+        this.viewed = true;
     }
-
     //getters//
     public int getId() {
         return id;
@@ -41,7 +41,7 @@ public class Movie {
         return creator;
     }
 
-    public int getDuration() {
+    public String getDuration() {
         return duration;
     }
 
@@ -74,9 +74,7 @@ public class Movie {
         this.creator = creator;
     }
 
-    public void setDuration(int duration) {
-        this.duration = duration;
-    }
+    public void setDuration(String duration) {this.duration = duration;}
 
     public void setYear(int year) {
         this.year = year;
@@ -89,4 +87,5 @@ public class Movie {
     public void setTimeViewed(int timeViewed) {
         this.timeViewed = timeViewed;
     }
+
 }

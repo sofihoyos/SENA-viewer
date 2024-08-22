@@ -1,11 +1,9 @@
 package edu.misena.senaviewer.model;
 
-import java.util.Date;
-
 public class Book {
     private int id;
     private String title;
-    private Date editionDate;
+    private String editionDate;
     private String editorial;
     private String authors;
     private String isbn;
@@ -14,7 +12,7 @@ public class Book {
 
     public Book(
             String title,
-            Date editionDate,
+            String editionDate,
             String editorial,
             String isbn
     ){
@@ -22,6 +20,7 @@ public class Book {
         this.editionDate=editionDate;
         this.editorial=editorial;
         this.isbn=isbn;
+        this.readed=true;
     }
 
     //getters//
@@ -33,7 +32,7 @@ public class Book {
         return title;
     }
 
-    public Date getEditionDate() {
+    public String getEditionDate() {
         return editionDate;
     }
 
@@ -66,7 +65,7 @@ public class Book {
         this.title = title;
     }
 
-    public void setEditionDate(Date editionDate) {
+    public void setEditionDate(String editionDate) {
         this.editionDate = editionDate;
     }
 
