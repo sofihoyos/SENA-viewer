@@ -1,7 +1,7 @@
 package edu.misena.senaviewer.model;
 
 public class Serie {
-    private int id;
+    public int id;
     private String title;
     private String gender;
     private String creator;
