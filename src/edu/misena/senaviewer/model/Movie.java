@@ -23,4 +23,15 @@ public class Movie extends Film {
         this.timeViewed = timeViewed;
     }
 
+    @Override
+    public String toString() {
+        return "Movie{" +
+                "Title='" + getTitle() + '\'' +
+                ", Gender='" + getGender() + '\'' +
+                ", Creator='" + getCreator() + '\'' +
+                ", Duration=" + getDuration() + " minutes" +
+                ", Time Viewed=" + timeViewed + " minutes" +
+                '}';
+    }
+
 }

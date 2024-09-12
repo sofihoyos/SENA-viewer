@@ -22,4 +22,14 @@ public class Magazine extends Publication {
     public void setId(int id) {
         this.id = id;
     }
+
+    @Override
+    public String toString() {
+        return "Magazine{" +
+                "ID=" + id +
+                ", Title='" + getTitle() + '\'' +
+                ", Edition Date='" + getEdititionDate() + '\'' +
+                ", Editorial='" + getEditorial() + '\'' +
+                '}';
+    }
 }

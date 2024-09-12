@@ -32,4 +32,16 @@ public class Serie extends Film {
     public void setSessionQuantity(int sessionQuantity) {
         this.sessionQuantity = sessionQuantity;
     }
+
+    @Override
+    public String toString() {
+        return "Serie{" +
+                "Title='" + getTitle() + '\'' +
+                ", Gender='" + getGender() + '\'' +
+                ", Creator='" + getCreator() + '\'' +
+                ", Duration=" + getDuration() + " minutes" +
+                ", Time Viewed=" + timeViewed + " minutes" +
+                ", Session Quantity=" + sessionQuantity +
+                '}';
+    }
 }

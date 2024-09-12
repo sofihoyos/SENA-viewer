@@ -58,4 +58,19 @@ public class Book extends Publication {
     public void setTimeReaded(int timeReaded) {
         this.timeReaded = timeReaded;
     }
+
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "ID=" + id +
+                ", Title='" + getTitle() + '\'' +
+                ", Edition Date='" + getEdititionDate() + '\'' +
+                ", Editorial='" + getEditorial() + '\'' +
+                ", Authors='" + authors + '\'' +
+                ", ISBN='" + isbn + '\'' +
+                ", Readed=" + (readed ? "Yes" : "No") +
+                ", Time Readed=" + timeReaded + " minutes" +
+                '}';
+    }
 }

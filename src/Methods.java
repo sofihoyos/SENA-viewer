@@ -89,7 +89,7 @@ public class Methods {
                 for(Book book : books){
                     System.out.println("id:" + book.getId());
                     System.out.println("Título: " + book.getTitle());
-                    System.out.println("Fecha edicion:" + book.getEditionDate());
+                    System.out.println("Fecha edicion:" + book.getEdititionDate());
                     System.out.println("Editorial: " + book.getEditorial());
                     System.out.println("Autor:" + book.getAuthors());
                     System.out.println("Isbn:" + book.getIsbn());
@@ -117,7 +117,7 @@ public class Methods {
                 for (Magazine magazine : magazines) {
                     System.out.println("id:" + magazine.getId());
                     System.out.println("Título: " + magazine.getTitle());
-                    System.out.println("Fecha edicion: " + magazine.getEditionDate());
+                    System.out.println("Fecha edicion: " + magazine.getEdititionDate());
                     System.out.println("Editorial: " + magazine.getEditorial());
                     System.out.println("Autor: " +magazine.getAuthors());
                 }
