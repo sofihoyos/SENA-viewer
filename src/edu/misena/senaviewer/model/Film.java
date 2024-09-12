@@ -9,7 +9,7 @@ public class Film {
     public int year;
     public boolean viewed;
 
-    public Film(int id, String title, String gender, String creator, int duration, int year, boolean viewed) {
+    public Film(String title, String gender, String creator, int duration) {
         this.title = title;
         this.gender = gender;
         this.creator = creator;

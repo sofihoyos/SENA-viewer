@@ -1,57 +1,43 @@
 package edu.misena.senaviewer.model;
 
-public class Book {
-    private int id;
-    private String title;
-    private String editionDate;
-    private String editorial;
-    private String authors;
-    private String isbn;
-    private Boolean readed;
-    private int timeReaded;
+public class Book extends Publication {
+    public int id;
+    public String authors;
+    public String isbn;
+    public Boolean readed;
+    public int timeReaded;
 
     public Book(
+            int id,
             String title,
             String editionDate,
             String editorial,
-            String isbn
+            String authors,
+            String isbn,
+            Boolean readed,
+            int timeReaded
     ){
-        this.title=title;
-        this.editionDate=editionDate;
-        this.editorial=editorial;
+        super(title,editionDate,editorial);
+        this.id=id;
+        this.authors=authors;
         this.isbn=isbn;
         this.readed=true;
+        this.timeReaded=timeReaded;
     }
 
     //getters//
     public int getId() {
         return id;
     }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public String getEditionDate() {
-        return editionDate;
-    }
-
-    public String getEditorial() {
-        return editorial;
-    }
-
     public String getAuthors() {
         return authors;
     }
-
     public String getIsbn() {
         return isbn;
     }
-
     public Boolean getReaded() {
         return readed;
     }
-
     public int getTimeReaded() {
         return timeReaded;
     }
@@ -60,31 +46,15 @@ public class Book {
     public void setId(int id) {
         this.id = id;
     }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public void setEditionDate(String editionDate) {
-        this.editionDate = editionDate;
-    }
-
-    public void setEditorial(String editorial) {
-        this.editorial = editorial;
-    }
-
     public void setAuthors(String authors) {
         this.authors = authors;
     }
-
     public void setIsbn(String isbn) {
         this.isbn = isbn;
     }
-
     public void setReaded(boolean readed) {
         this.readed = readed;
     }
-
     public void setTimeReaded(int timeReaded) {
         this.timeReaded = timeReaded;
     }

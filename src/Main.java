@@ -9,10 +9,10 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         int opcionMenu = -1;
 
-        Methods.methodsMovie.addMovie(new Movie("Inception", "Sci-Fi", "Christopher Nolan", "148 min", 2010));
-        Methods.methodsSerie.addSerie(new Serie("Stranger Things", "Science Fiction", "50 min por episodio"));
-        Methods.methodsBook.addBook(new Book("1984", "8 de junio de 1949", "Secker & Warburg", "978-0451524935"));
-        Methods.methodsMagazine.addMagazine(new Magazine("National Geographic", "Agosto 2024", "National Geographic Partners"));
+        Methods.methodsMovie.addMovie(new Movie("Inception", "Sci-Fi", "Christopher Nolan", 148, 2010));
+        Methods.methodsSerie.addSerie(new Serie("Stranger Things", "Science Fiction", "Matt y Ross Duffer",50, 65,4));
+        Methods.methodsBook.addBook(new Book(234,"1984", "8 de junio de 1949","National Geographic Partners" ,"Secker & Warburg", "978-0451524935",true,250));
+        Methods.methodsMagazine.addMagazine(new Magazine(123,"National Geographic", "Agosto 2024", "National Geographic Partners"));
 
         while (opcionMenu != 0) {
             Methods.mostrarMenu();
