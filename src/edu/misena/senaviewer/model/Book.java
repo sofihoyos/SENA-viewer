@@ -62,15 +62,14 @@ public class Book extends Publication {
 
     @Override
     public String toString() {
-        return "Book{" +
-                "ID=" + id +
-                ", Title='" + getTitle() + '\'' +
-                ", Edition Date='" + getEdititionDate() + '\'' +
-                ", Editorial='" + getEditorial() + '\'' +
-                ", Authors='" + authors + '\'' +
-                ", ISBN='" + isbn + '\'' +
-                ", Readed=" + (readed ? "Yes" : "No") +
-                ", Time Readed=" + timeReaded + " minutes" +
-                '}';
+        return "Book:\n" +
+                "ID: " + id + '\n' +
+                "Title: " + getTitle() + '\n' +
+                "Edition Date: " + getEdititionDate() + '\n' +
+                "Editorial: " + getEditorial() + '\n' +
+                "Authors: " + authors + '\n' +
+                "ISBN: " + isbn + '\n' +
+                "Read: " + (readed ? "Yes" : "No") + '\n' +
+                "Time Read: " + timeReaded + " minutes";
     }
 }

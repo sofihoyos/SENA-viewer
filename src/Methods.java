@@ -7,6 +7,11 @@ import edu.misena.senaviewer.model.Magazine;
 
 public class Methods {
 
+    public static List<Movie> methodsMovie = new ArrayList<>();
+    public static List<Serie> methodsSerie = new ArrayList<>();
+    public static List<Book> methodsBook = new ArrayList<>();
+    public static List<Magazine> methodsMagazine = new ArrayList<>();
+
     public static void mostrarMenu() {
         System.out.println("Menu:");
         System.out.println("1. Movies");
@@ -19,114 +24,52 @@ public class Methods {
         System.out.print("Seleccione una opcion (0-6): ");
     }
 
-    public static class methodsMovie {
-        private static List<Movie> movies = new ArrayList<>();
+    // Métodos para agregar y mostrar películas
+    public static void addMovie(Movie movie) {
+        methodsMovie.add(movie);
+    }
 
-        public static void showMovies() {
-            if (movies.isEmpty()) { // verifica que si hay datos dentro de este y continua
-                System.out.println("No hay películas disponibles.");
-            } else {
-                System.out.println("Lista de películas:");
-                for (Movie movie : movies) {
-                    System.out.println("ID: " + movie.getId());
-                    System.out.println("Título: " + movie.getTitle());
-                    System.out.println("Género: " + movie.getGender());
-                    System.out.println("Creador: " + movie.getCreator());
-                    System.out.println("Duración: " + movie.getDuration() + " minutos");
-                    System.out.println("Año: " + movie.getYear());
-                    System.out.println("Visto: " + (movie.getViewed() ? "Sí" : "No"));
-                    System.out.println("Tiempo visto: " + movie.getTimeViewed() + " minutos");
-                    System.out.println();
-                }
-            }
-        }
-
-        public static void addMovie(Movie movie) {
-            movies.add(movie);
-            System.out.println("Película agregada:");
+    public static void showMovies() {
+        for (Movie movie : methodsMovie) {
             System.out.println(movie);
         }
     }
 
-    public static class methodsSerie {
-        private static List<Serie> series = new ArrayList<>();
 
-        public static void showSerie() {
-            if (series.isEmpty()) {
-                System.out.println("No hay series disponibles.");
-            } else {
-                System.out.println("Lista de series:");
-                for (Serie serie : series) {
-                    System.out.println("Id: " + serie.getId());
-                    System.out.println("Título: " + serie.getTitle());
-                    System.out.println("Género: " + serie.getGender());
-                    System.out.println("Creador: " + serie.getCreator());
-                    System.out.println("Duración: " + serie.getDuration() + " minutos");
-                    System.out.println("Año: " + serie.getYear());
-                    System.out.println("Visto: " + (serie.getViewed() ? "Sí" : "No"));
-                    System.out.println("Tiempo visto: " + serie.getTimeViewed() + " minutos");
-                    System.out.println("Temporadas: " + serie.getSessionQuantity());
-                    System.out.println();
-                }
-            }
-        }
 
-        public static void addSerie(Serie serie) {
-            series.add(serie);
-            System.out.println("Serie agregada:");
+    // Métodos para agregar y mostrar series
+    public static void addSerie(Serie serie) {
+        methodsSerie.add(serie);
+    }
+
+    public static void showSerie() {
+        for (Serie serie : methodsSerie) {
             System.out.println(serie);
         }
     }
 
-    public static class methodsBook {
-        private static List<Book> books = new ArrayList<>();
 
-        public static void showBook() {
-            if (books.isEmpty()){
-                System.out.println("No hay libros disponibles.");
-            } else {
-                System.out.println("Lista de libros:");
-                for(Book book : books){
-                    System.out.println("id:" + book.getId());
-                    System.out.println("Título: " + book.getTitle());
-                    System.out.println("Fecha edicion:" + book.getEdititionDate());
-                    System.out.println("Editorial: " + book.getEditorial());
-                    System.out.println("Autor:" + book.getAuthors());
-                    System.out.println("Isbn:" + book.getIsbn());
-                    System.out.println("Leido: " + (book.getReaded() ? "Sí" : "No"));
-                    System.out.println("Tiempo de lectura: " + book.getTimeReaded() + " minutos");
-                }
-            }
-        }
 
-        public static void addBook(Book book) {
-            books.add(book);
-            System.out.println("Libro agregado:");
+    // Métodos para agregar y mostrar libros
+    public static void addBook(Book book) {
+        methodsBook.add(book);
+    }
+
+    public static void showBook() {
+        for (Book book : methodsBook) {
             System.out.println(book);
         }
     }
 
-    public static class methodsMagazine {
-        private static List<Magazine> magazines = new ArrayList<>();
 
-        public static void showMagazine() {
-            if (magazines.isEmpty()) {
-                System.out.println("No hay revistas disponibles. ");
-            } else {
-                System.out.println("Lista de revitas: ");
-                for (Magazine magazine : magazines) {
-                    System.out.println("id:" + magazine.getId());
-                    System.out.println("Título: " + magazine.getTitle());
-                    System.out.println("Fecha edicion: " + magazine.getEdititionDate());
-                    System.out.println("Editorial: " + magazine.getEditorial());
-                    System.out.println("Autor: " +magazine.getAuthors());
-                }
-            }
-        }
 
-        public static void addMagazine(Magazine magazine) {
-            magazines.add(magazine);
-            System.out.println("Revista agregada:");
+    // Métodos para agregar y mostrar revistas
+    public static void addMagazine(Magazine magazine) {
+        methodsMagazine.add(magazine);
+    }
+
+    public static void showMagazine() {
+        for (Magazine magazine : methodsMagazine) {
             System.out.println(magazine);
         }
     }

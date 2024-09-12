@@ -25,13 +25,13 @@ public class Movie extends Film {
 
     @Override
     public String toString() {
-        return "Movie{" +
-                "Title='" + getTitle() + '\'' +
-                ", Gender='" + getGender() + '\'' +
-                ", Creator='" + getCreator() + '\'' +
-                ", Duration=" + getDuration() + " minutes" +
-                ", Time Viewed=" + timeViewed + " minutes" +
-                '}';
+        return "Movie  \n" +
+                "Title: " + getTitle() + '\n' +
+                "Gender: " + getGender() + '\n' +
+                "Creator: " + getCreator() + '\n' +
+                "Duration: " + getDuration() + " minutes\n" +
+                "Time Viewed: " + timeViewed + " minutes";
     }
+
 
 }

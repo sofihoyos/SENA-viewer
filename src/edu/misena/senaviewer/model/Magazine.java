@@ -25,11 +25,10 @@ public class Magazine extends Publication {
 
     @Override
     public String toString() {
-        return "Magazine{" +
-                "ID=" + id +
-                ", Title='" + getTitle() + '\'' +
-                ", Edition Date='" + getEdititionDate() + '\'' +
-                ", Editorial='" + getEditorial() + '\'' +
-                '}';
+        return "Magazine:\n" +
+                "ID: " + id + '\n' +
+                "Title: " + getTitle() + '\n' +
+                "Edition Date: " + getEdititionDate() + '\n' +
+                "Editorial: " + getEditorial();
     }
 }

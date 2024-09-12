@@ -35,13 +35,12 @@ public class Serie extends Film {
 
     @Override
     public String toString() {
-        return "Serie{" +
-                "Title='" + getTitle() + '\'' +
-                ", Gender='" + getGender() + '\'' +
-                ", Creator='" + getCreator() + '\'' +
-                ", Duration=" + getDuration() + " minutes" +
-                ", Time Viewed=" + timeViewed + " minutes" +
-                ", Session Quantity=" + sessionQuantity +
-                '}';
+        return "Serie \n" +
+                "Title: " + getTitle() + '\n' +
+                "Gender: " + getGender() + '\n' +
+                "Creator: " + getCreator() + '\n' +
+                "Duration: " + getDuration() + " minutes\n" +
+                "Time Viewed: " + timeViewed + " minutes\n" +
+                "Session Quantity: " + sessionQuantity;
     }
 }
