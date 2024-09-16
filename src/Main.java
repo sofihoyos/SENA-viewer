@@ -12,7 +12,7 @@ public class Main {
         Methods.addMovie(new Movie("Inception", "Sci-Fi", "Christopher Nolan", 148, 50));
         Methods.addSerie(new Serie("Stranger Things", "Science Fiction", "Matt y Ross Duffer", 50, 65, 4));
         Methods.addBook(new Book(234, "1984", "8 de junio de 1949", "National Geographic Partners", "Secker & Warburg", "978-0451524935", true, 250));
-        Methods.addMagazine(new Magazine(123, "National Geographic", "Agosto 2024", "National Geographic Partners"));
+        Methods.addMagazine(new Magazine(123, "National Geographic", "Agosto 2024", "National Geographic Partners", "vogue"));
 
         while (opcionMenu != 0) {
             Methods.mostrarMenu();

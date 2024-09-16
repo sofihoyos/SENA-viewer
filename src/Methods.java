@@ -6,12 +6,6 @@ import edu.misena.senaviewer.model.Book;
 import edu.misena.senaviewer.model.Magazine;
 
 public class Methods {
-
-    public static List<Movie> methodsMovie = new ArrayList<>();
-    public static List<Serie> methodsSerie = new ArrayList<>();
-    public static List<Book> methodsBook = new ArrayList<>();
-    public static List<Magazine> methodsMagazine = new ArrayList<>();
-
     public static void mostrarMenu() {
         System.out.println("Menu:");
         System.out.println("1. Movies");
